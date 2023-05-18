@@ -1,0 +1,14 @@
+body{
+    margin: 20px;
+}
+#header{
+    background-image: url('./hero.jpg');
+    height: 400px;
+}
+#div-flex{
+    display: flex;
+}
+#div-flex>img{
+    align-items: flex-start;
+    margin: 10px;
+}
