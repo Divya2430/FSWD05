@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Bulb</title>
+    <style>
+        body{
+            background-color: white;
+        }
+        .container{
+            display: grid;
+            place-items: center;
+        }
+        .imgClass{
+            height: 300px;
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+      <div class="container">
+        <img class="imgClass" src="./images/light-bulb-svgrepo-com.svg" alt="" id="imgBulb">
+        <button type="submit" onclick="buttonClick()" id="btn">CLICK ME</button>
+      </div>
+
+    <script>
+        let isLightOn = false;
+
+        let buttonClick = () => {
+            if(isLightOn === false)
+            {
+                isLightOn = true;
+                let bulbImage = document.getElementById('imgBulb');
+                bulbImage.src = './images/light-bulb-color-icon.svg';
+                document.querySelector("body").style.backgroundColor = "black";
+            }
+            else
+            {
+                isLightOn = false;
+                let bulbImage = document.getElementById('imgBulb');
+                bulbImage.src = './images/light-bulb-svgrepo-com.svg';
+                document.querySelector("body").style.backgroundColor = "white";
+            }
+            
+        }
+    </script>
+</body>
+</html>
